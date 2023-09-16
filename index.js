@@ -1,8 +1,24 @@
-const farmAnimals = 'cow horse sheep pig chicken';
 
-const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let farmAnimals = 'cow horse sheep pig chicken';
+let [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ');
 
-const muppet = {
+farmAnimals = 'cow sheep pig chicken';
+let [bessie, dolly, babe, little] = farmAnimals.split(' ');
+
+farmAnimals = 'cow sheep pig';
+let [blackAndWhite, black, pink] = farmAnimals.split(' ');
+
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let [red, orange, yellow, green, blue, indigo, violet] = colors;
+
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+let [r, o, y, g, b, v] = colors;
+
+colors = ['indigo'];
+let [indg] = colors;
+
+
+let muppet = {
   muppetName: 'Miss Piggy',
   color: 'pink',
   song: 'Never Before, Never Again',
@@ -10,7 +26,9 @@ const muppet = {
   partner: 'Kermit'
 };
 
-const nestedMuppet = {
+let {muppetName, color, song, job, partner} = muppet;
+
+let nestedMuppet = {
   nestedName: 'Kermit',
   nestedColor: 'green',
   album: {
@@ -25,24 +43,4 @@ const nestedMuppet = {
   nestedPartner: 'Miss Piggy'
 };
 
-// Strings
-
-// 1. Use destructuring to assign appropriate variables based on the sounds animals make.
-
-// 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
-
-// 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
-
-// Arrays
-
-// 4. Use destructuring to assign appropriate variables using the color names.
-
-// 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
-
-// 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
-
-// Objects
-
-// 7. Use destructuring to assign all variables using the keys as the variable names
-
-// 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+let {album: {theMuppetMovie: {song2, song4}}, nestedJob, nestedPartner} = nestedMuppet;
